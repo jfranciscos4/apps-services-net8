@@ -1,4 +1,4 @@
-**Errata** (19 items)
+**Errata** (20 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net8/issues) or email me at markjprice (at) gmail.com.
 
@@ -8,6 +8,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 209 - Generating grayscale thumbnails](#page-209---generating-grayscale-thumbnails)
 - [Page 249 - Creating a console app to generate PDF documents](#page-249---creating-a-console-app-to-generate-pdf-documents)
 - [Page 260 - Date and time calculations](#page-260---date-and-time-calculations)
+- [Page 265 - Localizing the DayOfWeek enum](#page-265---localizing-the-dayofweek-enum)
 - [Page 298 - Testing globalization and localization](#page-298---testing-globalization-and-localization)
 - [Page 328 - Configuring HTTP logging for the web service and Page 363 - Authenticating service clients using JWT bearer authentication](#page-328---configuring-http-logging-for-the-web-service-and-page-363---authenticating-service-clients-using-jwt-bearer-authentication)
 - [Page 366 - Exercise 8.4 – Exposing data via the web using OData services](#page-366---exercise-84--exposing-data-via-the-web-using-odata-services)
@@ -190,6 +191,19 @@ The correct statement is:
 ```cs
 WriteLine($"There are {untilXmas.Days} days and {untilXmas.Hours
   } hours until Christmas {xmas.Year}.");
+```
+
+# Page 265 - Localizing the DayOfWeek enum
+
+> Thanks to `kingace9371` in this book's Discord channel for raising this issue on August 23, 2025.
+
+In Step 1, the first and third `WriteLine` statement string values are missing their `$` prefix because they are interpolated strings.
+
+For example, the first statement should be:
+```cs
+// DayOfWeek is not localized to Danish.
+WriteLine($"Culture: {Thread.CurrentThread.CurrentCulture
+  .NativeName}, DayOfWeek: {DateTime.Now.DayOfWeek}";
 ```
 
 # Page 298 - Testing globalization and localization
