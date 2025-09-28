@@ -2,6 +2,8 @@
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/apps-services-net8/issues) or email me at markjprice (at) gmail.com.
 
+> **Warning!** Avoid copying and pasting links that break over multiple lines and include hyphens or dashes because your PDF reader might remove a hyphen thinking that it being helpful but break the link! Just click on the links and they will work. Or carefully check that your PDF reader has not removed a hyphen after pasting into your web browser address bar. [See an example of this issue here](https://github.com/markjprice/cs13net9/issues/77).
+
 - [Page 104 - Table-per-concrete-type (TPC) mapping strategy](#page-104---table-per-concrete-type-tpc-mapping-strategy)
 - [Page 148 - Using a .NET app to create Azure Cosmos DB resources](#page-148---using-a-net-app-to-create-azure-cosmos-db-resources)
 - [Page 166 - Implementing stored procedures](#page-166---implementing-stored-procedures)
